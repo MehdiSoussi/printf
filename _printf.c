@@ -60,7 +60,7 @@ int _printf(const char *format, ...)
 				default:
 					write(1, &prc, 1);
 					write(1, &format[i], 1);
-					counter+2;			
+					counter+=2;	
 					break;
 			}
 		}
