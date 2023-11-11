@@ -15,8 +15,12 @@ int _printf(const char *format, ...)
 	char caractere_toprint;
 	char *string_toprint;
 	va_list args;
+	char prc = '%';
 
 	va_start(args, format);
+
+	if (format[0] == '%' && format[1] == '\0')
+                return (-1);
 
 	for (i = 0; i < size; i++)
 	{
@@ -54,6 +58,9 @@ int _printf(const char *format, ...)
 					print_number(number_toprint, &counter);
 					break;
 				default:
+					write(1, &prc, 1);
+					write(1, &format[i], 1);
+					counter+2;			
 					break;
 			}
 		}
