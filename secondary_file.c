@@ -97,13 +97,13 @@ write(1, string_to_write, byte_to_write);
  * @capital: input
  * Return: binary number
  */
-void hexqdecimal_numbers_pointers(int d, int *counter, int capital)
+void hexqdecimal_numbers_pointers(long int d, int *counter, int capital)
 {
-    int quotient, remainder;
-    int i, j = 0;
+    long int quotient, remainder;
+    long int i, j = 0;
     char hexadecimalnum[100];
     char inc = '0';
-    int c;
+    long int c;
  
  
     quotient = d;
@@ -132,4 +132,17 @@ void hexqdecimal_numbers_pointers(int d, int *counter, int capital)
             write(1, &hexadecimalnum[i], 1);
             *counter += 1;
     }
+}
+/**
+ * print_address - a function
+ * @toprint: input
+ * @counter: input
+ * Return: binary number
+ */
+void print_address(void *toprint, int *counter)
+{
+    long int casted;
+
+    casted = (long int) toprint;
+    hexqdecimal_numbers_pointers(casted, counter, 0);
 }
