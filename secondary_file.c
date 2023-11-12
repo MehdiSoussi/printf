@@ -144,5 +144,5 @@ void print_address(void *toprint, int *counter)
     long int casted;
 
     casted = (long int) toprint;
-    hexqdecimal_numbers_pointers(casted, counter, 0);
+    hexqdecimal_numbers_pointers(casted, counter, 1);
 }
