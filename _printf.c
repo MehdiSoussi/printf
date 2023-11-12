@@ -75,7 +75,6 @@ int _printf(const char *format, ...)
 					string_toprint = va_arg(args, void*);
 					print_address(string_toprint, &counter);
 				break;
-
 				default:
 					write_and_count(&prc, 1, &counter, 1);
 					write_and_count(&format[i], 1, &counter, 1);
@@ -86,5 +85,3 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (counter);
 }
-
-
