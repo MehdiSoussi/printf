@@ -14,6 +14,6 @@ int octal_numbers(int d);
 void hexqdecimal_numbers(int d, int *counter, int capital);
 
 void print_with_S(char *toprint, int *counter);
-
+void hexqdecimal_numbers_pointers(int d, int *counter, int capital);
 
 #endif
