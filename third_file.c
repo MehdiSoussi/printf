@@ -10,7 +10,7 @@ int binary_numbers(int d)
 int res = 0, reminder, pow = 1;
 
 if(d < 0)
-return d;
+return -d;
 
 do
 {
