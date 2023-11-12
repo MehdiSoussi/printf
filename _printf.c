@@ -50,6 +50,23 @@ int _printf(const char *format, ...)
 					binary = binary_numbers(number_toprint);
 					print_number(binary, &counter);
 				break;	
+				case 'o':
+					number_toprint = va_arg(args, int);
+					binary = octal_numbers(number_toprint);
+					print_number(binary, &counter);
+				break;	
+				case 'u':
+					number_toprint = va_arg(args, int);
+					print_number(number_toprint, &counter);
+				break;	
+				case 'x':
+					number_toprint = va_arg(args, int);
+					hexqdecimal_numbers(number_toprint, &counter, 1);
+				break;	
+				case 'X':
+					number_toprint = va_arg(args, int);
+					hexqdecimal_numbers(number_toprint, &counter, 0);
+				break;	
 				default:
 					write_and_count(&prc, 1, &counter, 1);
 					write_and_count(&format[i], 1, &counter, 1);
