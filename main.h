@@ -15,4 +15,5 @@ void hexqdecimal_numbers(int d, int *counter, int capital);
 
 void print_with_S(char *toprint, int *counter);
 
+
 #endif
