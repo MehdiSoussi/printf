@@ -84,7 +84,8 @@ int power(int ten, int to_the_power)
  * @count: input
  * Return: result
  */
-void write_and_count(const char *string_to_write, int byte_to_write , int *counter, int count)
+void write_and_count(const char *string_to_write, int byte_to_write,
+	int *counter, int count)
 {
 write(1, string_to_write, byte_to_write);
 *counter += count;

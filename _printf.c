@@ -13,10 +13,11 @@ int _printf(const char *format, ...)
 	int i, size = _strlen(format), counter = 0, string_length, number_toprint;
 	char caractere_toprint, prc = '%', *string_toprint;
 	va_list args;
+
 	va_start(args, format);
 
 	if (format[0] == '%' && format[1] == '\0')
-                return (-1);
+		return (-1);
 	for (i = 0; i < size; i++)
 	{
 		if (format[i] != '%')
@@ -44,8 +45,8 @@ int _printf(const char *format, ...)
 					print_number(number_toprint, &counter);
 					break;
 				default:
-				write_and_count(&prc, 1, &counter, 1);
-				write_and_count(&format[i], 1, &counter, 1);
+					write_and_count(&prc, 1, &counter, 1);
+					write_and_count(&format[i], 1, &counter, 1);
 					break;
 			}
 		}
