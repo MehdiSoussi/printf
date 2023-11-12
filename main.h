@@ -8,5 +8,6 @@ void print_number(int n, int *counter);
 
 int power(int ten, int to_the_power);
 void write_and_count(const char*, int, int*, int);
+int binary_numbers(int d);
 
 #endif

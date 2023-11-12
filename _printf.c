@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 {
 	int i, size = _strlen(format), counter = 0, string_length, number_toprint;
 	char caractere_toprint, prc = '%', *string_toprint;
+	int binary;
 	va_list args;
 
 	va_start(args, format);
@@ -44,6 +45,11 @@ int _printf(const char *format, ...)
 					number_toprint = va_arg(args, int);
 					print_number(number_toprint, &counter);
 					break;
+				case 'b':
+					number_toprint = va_arg(args, int);
+					binary = binary_numbers(number_toprint);
+					print_number(binary, &counter);
+				break;	
 				default:
 					write_and_count(&prc, 1, &counter, 1);
 					write_and_count(&format[i], 1, &counter, 1);
