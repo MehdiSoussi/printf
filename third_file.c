@@ -107,3 +107,16 @@ void print_with_S(char *toprint, int *counter)
         i++;
 	}
 }
+/**
+ * print_address - a function
+ * @toprint: input
+ * @counter: input
+ * Return: binary number
+ */
+void print_address(void *toprint, int *counter)
+{
+    int casted;
+
+    casted = (int)toprint;
+    hexqdecimal_numbers_pointers(casted, counter, 0);
+}
