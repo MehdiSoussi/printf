@@ -71,7 +71,10 @@ int _printf(const char *format, ...)
 					string_toprint = va_arg(args, char*);
 					print_with_S(string_toprint, &counter);
 				break;
-
+				case 'p':
+					string_toprint = va_arg(args, void*);
+					print_address(string_toprint, &counter);
+				break;
 				default:
 					write_and_count(&prc, 1, &counter, 1);
 					write_and_count(&format[i], 1, &counter, 1);
