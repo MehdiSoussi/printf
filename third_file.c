@@ -40,9 +40,11 @@ int octal_numbers(int d)
 	return (res);
 }
 /**
- * octal_numbers - a function
+ * hexqdecimal_numbers - a function
  * @d: input
- * Return: binary number
+ * @counter: input
+ * @capital: input
+ * Return: hexadecimal number
  */
 void hexqdecimal_numbers(int d, int *counter, int capital)
 {
