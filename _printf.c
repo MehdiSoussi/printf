@@ -49,32 +49,32 @@ int _printf(const char *format, ...)
 					number_toprint = va_arg(args, int);
 					binary = binary_numbers(number_toprint);
 					print_number(binary, &counter);
-				break;	
+					break;
 				case 'o':
 					number_toprint = va_arg(args, int);
 					binary = octal_numbers(number_toprint);
 					print_number(binary, &counter);
-				break;	
+					break;
 				case 'u':
 					number_toprint = va_arg(args, int);
 					print_number(number_toprint, &counter);
-				break;	
+					break;
 				case 'x':
 					number_toprint = va_arg(args, int);
 					hexqdecimal_numbers(number_toprint, &counter, 1);
-				break;	
+					break;
 				case 'X':
 					number_toprint = va_arg(args, int);
 					hexqdecimal_numbers(number_toprint, &counter, 0);
-				break;
+					break;
 				case 'S':
 					string_toprint = va_arg(args, char*);
 					print_with_S(string_toprint, &counter);
-				break;
+					break;
 				case 'p':
 					string_toprint = va_arg(args, void*);
 					print_address(string_toprint, &counter);
-				break;
+					break;
 				default:
 					write_and_count(&prc, 1, &counter, 1);
 					write_and_count(&format[i], 1, &counter, 1);
