@@ -30,10 +30,9 @@ int octal_numbers(int d)
 {
 	int res = 0, reminder, pow = 1;
 
-	do
-	{
+	do {
 		reminder = d % 8;
-		d = d / 8 ;
+		d = d / 8;
 		res = reminder * pow + res;
 		pow = pow * 10;
 	} while (d != 0);
@@ -60,14 +59,14 @@ void hexqdecimal_numbers(int d, int *counter, int capital)
 		if (remainder < 10)
 			hexadecimalnum[j++] = 48 + remainder;
 		else
-			if(capital == 1)
+			if (capital == 1)
 				hexadecimalnum[j++] = 87 + remainder;
 			else
 				hexadecimalnum[j++] = 55 + remainder;
 		quotient = quotient / 16;
 	}
 
-	for (i = j-1; i >= 0; i--)
+	for (i = j - 1; i >= 0; i--)
 	{
 		write(1, &hexadecimalnum[i], 1);
 		*counter += 1;
