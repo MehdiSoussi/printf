@@ -84,22 +84,24 @@ void print_with_S(char *toprint, int *counter)
 	char x = 92;
 	char y = '0';
 	char z = 'x';
-	while(*(toprint+i) != '\0')
+
+	while (*(toprint + i) != '\0')
 	{
-		if(*(toprint+i) >= 127 || (*(toprint+i) > 0 && *(toprint+i) < 32))
+		if (*(toprint + i) >= 127 || (*(toprint + i) > 0 && *(toprint + i) < 32))
 		{
 			write(1, &x, 1);
 			write(1, &z, 1);
 			*counter = *counter + 2;
-			if(*(toprint+i) < 16)
+			if (*(toprint + i) < 16)
 			{
-				write(1, &y , 1);
+				write(1, &y, 1);
 				*counter = *counter + 1;
 			}
-			hexqdecimal_numbers(*(toprint+i), counter, 0);
+			hexqdecimal_numbers(*(toprint + i), counter, 0);
 		}
-		else{
-			write(1, toprint+i, 1);
+		else
+		{
+			write(1, toprint + i, 1);
 			*counter = *counter + 1;
 		}
 		i++;
